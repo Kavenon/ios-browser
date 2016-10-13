@@ -14,6 +14,7 @@
 		ACE7C0521DAF5EFB003827CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACE7C0501DAF5EFB003827CE /* LaunchScreen.storyboard */; };
 		ACE7C05D1DAF5EFB003827CE /* iosbrowser_swiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE7C05C1DAF5EFB003827CE /* iosbrowser_swiftTests.swift */; };
 		ACE7C0681DAF5EFB003827CE /* iosbrowser_swiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE7C0671DAF5EFB003827CE /* iosbrowser_swiftUITests.swift */; };
+		ACE7C0761DAF68B4003827CE /* albums.plist in Resources */ = {isa = PBXBuildFile; fileRef = ACE7C0751DAF68B4003827CE /* albums.plist */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		ACE7C0631DAF5EFB003827CE /* iosbrowser-swiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iosbrowser-swiftUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACE7C0671DAF5EFB003827CE /* iosbrowser_swiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iosbrowser_swiftUITests.swift; sourceTree = "<group>"; };
 		ACE7C0691DAF5EFB003827CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ACE7C0751DAF68B4003827CE /* albums.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = albums.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				ACE7C04E1DAF5EFB003827CE /* Assets.xcassets */,
 				ACE7C0501DAF5EFB003827CE /* LaunchScreen.storyboard */,
 				ACE7C0531DAF5EFB003827CE /* Info.plist */,
+				ACE7C0751DAF68B4003827CE /* albums.plist */,
 			);
 			path = "iosbrowser-swift";
 			sourceTree = "<group>";
@@ -230,6 +233,7 @@
 			files = (
 				ACE7C0521DAF5EFB003827CE /* LaunchScreen.storyboard in Resources */,
 				ACE7C04F1DAF5EFB003827CE /* Assets.xcassets in Resources */,
+				ACE7C0761DAF68B4003827CE /* albums.plist in Resources */,
 				ACE7C04D1DAF5EFB003827CE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -398,6 +402,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "iosbrowser-swift/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "pl.edu.agh.student.iosbrowser-swift";
@@ -409,6 +414,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "iosbrowser-swift/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "pl.edu.agh.student.iosbrowser-swift";
