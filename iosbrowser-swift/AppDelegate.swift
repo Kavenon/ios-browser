@@ -13,9 +13,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
+    let plistCatPath = NSBundle.mainBundle().pathForResource("albums", ofType: "plist");
 
+    var albums: NSArray?
+    
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        albums = NSArray(contentsOfFile:plistCatPath!);
         return true
     }
 
