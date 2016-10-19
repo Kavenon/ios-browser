@@ -69,35 +69,53 @@
                             </label>
                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="hGU-Fi-tkQ">
                                 <rect key="frame" x="187" y="194" width="94" height="29"/>
+                                <connections>
+                                    <action selector="stepperAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="Fhg-lI-YA5"/>
+                                </connections>
                             </stepper>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zmt-zz-NwB">
                                 <rect key="frame" x="20" y="245" width="59" height="30"/>
                                 <state key="normal" title="Previous"/>
+                                <connections>
+                                    <action selector="previousButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ueg-c7-aV2"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ebv-4m-RWd">
                                 <rect key="frame" x="548" y="245" width="32" height="30"/>
                                 <state key="normal" title="Next"/>
+                                <connections>
+                                    <action selector="nextButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="in1-AQ-iya"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ex7-Yv-bql">
                                 <rect key="frame" x="283" y="300" width="34" height="30"/>
                                 <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="saveButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Muu-Db-c5d"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GU0-WJ-kYL">
                                 <rect key="frame" x="278" y="338" width="45" height="30"/>
                                 <state key="normal" title="Delete"/>
+                                <connections>
+                                    <action selector="deleteAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9fu-Ab-hsr"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="naJ-su-q9f">
                                 <rect key="frame" x="285" y="376" width="31" height="30"/>
                                 <state key="normal" title="New"/>
+                                <connections>
+                                    <action selector="newButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OpM-GE-du8"/>
+                                </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XDe-Ie-b3I">
-                                <rect key="frame" x="142" y="198" width="11" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Record 1 of 5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="It3-TL-xWd">
+                                <rect key="frame" x="250" y="543" width="101" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Record 1 of 5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="It3-TL-xWd">
-                                <rect key="frame" x="250" y="552" width="101" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XDe-Ie-b3I">
+                                <rect key="frame" x="142" y="198" width="11" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -120,8 +138,10 @@
                             <constraint firstItem="GU0-WJ-kYL" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Kiw-5z-Rne"/>
                             <constraint firstItem="cjA-uy-XPr" firstAttribute="top" secondItem="cVS-qV-wja" secondAttribute="bottom" constant="24" id="Kn8-YB-1N6"/>
                             <constraint firstItem="naJ-su-q9f" firstAttribute="top" secondItem="GU0-WJ-kYL" secondAttribute="bottom" constant="8" id="LRG-Q9-fi6"/>
+                            <constraint firstItem="It3-TL-xWd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MSO-he-oxE"/>
                             <constraint firstItem="Kqo-O1-4Nl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="103" id="NVT-eU-Hhq"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Kqo-O1-4Nl" secondAttribute="trailing" id="P0r-Q8-as3"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="It3-TL-xWd" secondAttribute="bottom" constant="36" id="SbD-XW-GCo"/>
                             <constraint firstItem="GU0-WJ-kYL" firstAttribute="top" secondItem="ex7-Yv-bql" secondAttribute="bottom" constant="8" symbolic="YES" id="Sf7-g2-ikg"/>
                             <constraint firstAttribute="trailingMargin" secondItem="9hH-eU-a1O" secondAttribute="trailing" id="Tsx-qO-L1E"/>
                             <constraint firstItem="KFA-Ke-7df" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="103" id="UTl-Xl-Nut"/>
@@ -138,6 +158,7 @@
                             <constraint firstItem="9hH-eU-a1O" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="103" id="gSj-sT-lZC"/>
                             <constraint firstItem="ex7-Yv-bql" firstAttribute="centerX" secondItem="GU0-WJ-kYL" secondAttribute="centerX" id="hBx-RP-Xr1"/>
                             <constraint firstAttribute="leadingMargin" secondItem="cjA-uy-XPr" secondAttribute="leading" id="k4d-a8-Sdp"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="It3-TL-xWd" secondAttribute="bottom" constant="36" id="l0w-oO-rzu"/>
                             <constraint firstAttribute="trailingMargin" secondItem="lCl-6v-OOT" secondAttribute="trailing" id="m7a-Gz-nPV"/>
                             <constraint firstItem="vhy-XS-8bV" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="o7J-Kw-ycC"/>
                             <constraint firstAttribute="leadingMargin" secondItem="fVm-3v-5gh" secondAttribute="leading" id="ppt-pB-NXt"/>
@@ -158,13 +179,29 @@
                                 <exclude reference="Sf7-g2-ikg"/>
                                 <exclude reference="K25-78-6qV"/>
                                 <exclude reference="LRG-Q9-fi6"/>
+                                <exclude reference="fmd-g3-v3f"/>
+                                <exclude reference="l0w-oO-rzu"/>
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="artistInput" destination="Kqo-O1-4Nl" id="F4y-kh-ztm"/>
+                        <outlet property="deleteButton" destination="GU0-WJ-kYL" id="d3l-BK-TWj"/>
+                        <outlet property="genreInput" destination="9hH-eU-a1O" id="uPq-HT-Dxx"/>
+                        <outlet property="navLabel" destination="It3-TL-xWd" id="432-1R-9hO"/>
+                        <outlet property="newButton" destination="naJ-su-q9f" id="Qpz-y0-Q7j"/>
+                        <outlet property="nextButton" destination="ebv-4m-RWd" id="1lA-oL-Or4"/>
+                        <outlet property="previousButton" destination="Zmt-zz-NwB" id="HSB-tW-Cak"/>
+                        <outlet property="ratingLabel" destination="XDe-Ie-b3I" id="GXT-YY-y4t"/>
+                        <outlet property="saveButton" destination="ex7-Yv-bql" id="Mxa-wL-sgk"/>
+                        <outlet property="stepper" destination="hGU-Fi-tkQ" id="9qx-jc-ffE"/>
+                        <outlet property="titleInput" destination="KFA-Ke-7df" id="ijN-aD-dBO"/>
+                        <outlet property="yearInput" destination="lCl-6v-OOT" id="6jG-8i-8zk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="305" y="418"/>
+            <point key="canvasLocation" x="325" y="397"/>
         </scene>
     </scenes>
 </document>
