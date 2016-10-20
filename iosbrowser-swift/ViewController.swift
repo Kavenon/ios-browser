@@ -55,12 +55,12 @@ class ViewController: UIViewController {
             
         }
         else {
-            var album = self.albums![self.currentIndex] as! NSDictionary;
-            album.setValue(self.ratingLabel.text!, "rating");
-            album["artist"] = self.artistInput.text;
-            album["title"] = self.titleInput.text;
-            album["genre"] = self.genreInput.text;
-            album["date"] = self.yearInput.text?.intValue;
+            var album = self.albums![self.currentIndex] as! NSMutableDictionary;
+          //  album.setValue(self.ratingLabel.text, forKey: "rating");
+            album.setValue(self.artistInput.text, forKey: "artist");
+          //  album.setValue(self.titleInput.text, forKey: "title");
+          //  album.setValue(self.genreInput.text, forKey: "genre");
+          //  album.setValue(self.yearInput.text, forKey: "date");
         }
         
     }
