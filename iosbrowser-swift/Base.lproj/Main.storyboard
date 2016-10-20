@@ -27,6 +27,9 @@
                                 <rect key="frame" x="123" y="16" width="457" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="artistChange:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="a3c-aF-AAH"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fVm-3v-5gh">
                                 <rect key="frame" x="20" y="63" width="34" height="21"/>
@@ -38,6 +41,9 @@
                                 <rect key="frame" x="123" y="59" width="457" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="titleChange:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="wtl-3j-uh2"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Genre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cY3-bL-JXM">
                                 <rect key="frame" x="20" y="106" width="47" height="21"/>
@@ -49,6 +55,9 @@
                                 <rect key="frame" x="123" y="102" width="457" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="genreChange:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="zAO-fV-QHY"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Year" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cVS-qV-wja">
                                 <rect key="frame" x="20" y="153" width="34" height="21"/>
@@ -60,6 +69,9 @@
                                 <rect key="frame" x="123" y="149" width="457" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="yearChange:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="bBm-PE-CAm"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rating" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cjA-uy-XPr">
                                 <rect key="frame" x="20" y="198" width="49" height="21"/>
