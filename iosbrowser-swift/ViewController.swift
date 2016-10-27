@@ -43,7 +43,11 @@ class ViewController: UIViewController {
     @IBAction func previousButtonAction(sender: AnyObject) {
         
         if(self.currentIndex > 0){
-            self.currentIndex--;
+            
+            if(!self.newElementCreating){
+                self.currentIndex--;
+            }
+            
             self.editNthElement(self.currentIndex);
             if(self.currentIndex == 0){
                 self.previousButton.enabled = false;
@@ -75,16 +79,18 @@ class ViewController: UIViewController {
             album.setValue(self.genreInput.text, forKey: "genre");
             album.setValue(Int(self.yearInput.text!), forKey: "date");
         }
+        self.saveButton.enabled = false;
         
     }
     
     @IBAction func nextButtonAction(sender: AnyObject) {
         
-        self.currentIndex++;
-        if((self.albums?.count)!-1 < self.currentIndex){
+        
+        if((self.albums?.count)!-1 < self.currentIndex+1){
             self.newElement();
         }
         else {
+            self.currentIndex++;
             self.editNthElement(self.currentIndex);
             self.previousButton.enabled = true;
         }
@@ -201,8 +207,10 @@ class ViewController: UIViewController {
         navLabel.text = "Record \(self.currentIndex+1) of \(self.albums!.count)";
     }
     
-    func persistToPlist(){        
+    func persistToPlist(){
+        print("saving");
         albums!.writeToFile(plistCatPath!, atomically: true);
+        print("saved");
     }
 
     override func didReceiveMemoryWarning() {
